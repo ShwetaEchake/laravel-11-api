@@ -1,0 +1,455 @@
+{
+    "info": {
+        "_postman_id": "041d0fe4-6ea8-4a93-a18c-f27ea633fda9",
+        "name": "Laravel11Api",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+        "description": ""
+    },
+    "item": [
+        {
+            "name": "blog api",
+            "item": [
+                {
+                    "name": "new post",
+                    "request": {
+                        "method": "POST",
+                        "url": {
+                            "raw": "http://127.0.0.1:8000/api/add/post?title=hello&content=description",
+                            "query": [
+                                {
+                                    "key": "title",
+                                    "value": "hello"
+                                },
+                                {
+                                    "key": "content",
+                                    "value": "description"
+                                }
+                            ],
+                            "variable": [],
+                            "path": [
+                                "api",
+                                "add",
+                                "post"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "127",
+                                "0",
+                                "0",
+                                "1"
+                            ],
+                            "port": "8000"
+                        },
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "4|u8QHkowFCSl10cLNFVvKzSCIkeDgBq3jxsKFT5cv469280af",
+                                    "type": "string"
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "edit post",
+                    "request": {
+                        "method": "POST",
+                        "url": {
+                            "raw": "http://127.0.0.1:8000/api/edit/post?title=gggggg&content=fdf&post_id=1",
+                            "query": [
+                                {
+                                    "key": "title",
+                                    "value": "gggggg"
+                                },
+                                {
+                                    "key": "content",
+                                    "value": "fdf"
+                                },
+                                {
+                                    "key": "post_id",
+                                    "value": "1"
+                                }
+                            ],
+                            "variable": [],
+                            "path": [
+                                "api",
+                                "edit",
+                                "post"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "127",
+                                "0",
+                                "0",
+                                "1"
+                            ],
+                            "port": "8000"
+                        },
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "4|u8QHkowFCSl10cLNFVvKzSCIkeDgBq3jxsKFT5cv469280af",
+                                    "type": "string"
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "delete post",
+                    "request": {
+                        "method": "POST",
+                        "url": {
+                            "raw": "http://127.0.0.1:8000/api/delete/post/1",
+                            "path": [
+                                "api",
+                                "delete",
+                                "post",
+                                "1"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "127",
+                                "0",
+                                "0",
+                                "1"
+                            ],
+                            "port": "8000"
+                        },
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "4|u8QHkowFCSl10cLNFVvKzSCIkeDgBq3jxsKFT5cv469280af",
+                                    "type": "string"
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "get user infos",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "http://127.0.0.1:8000/api/user",
+                            "path": [
+                                "api",
+                                "user"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "127",
+                                "0",
+                                "0",
+                                "1"
+                            ],
+                            "port": "8000"
+                        },
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "4|u8QHkowFCSl10cLNFVvKzSCIkeDgBq3jxsKFT5cv469280af",
+                                    "type": "string"
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "get all posts",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "http://127.0.0.1:8000/api/all/posts",
+                            "path": [
+                                "api",
+                                "all",
+                                "posts"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "127",
+                                "0",
+                                "0",
+                                "1"
+                            ],
+                            "port": "8000"
+                        },
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "4|u8QHkowFCSl10cLNFVvKzSCIkeDgBq3jxsKFT5cv469280af",
+                                    "type": "string"
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "get single post",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "http://127.0.0.1:8000/api/single/post/2",
+                            "path": [
+                                "api",
+                                "single",
+                                "post",
+                                "2"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "127",
+                                "0",
+                                "0",
+                                "1"
+                            ],
+                            "port": "8000"
+                        }
+                    }
+                },
+                {
+                    "name": "add comment",
+                    "request": {
+                        "method": "POST",
+                        "url": {
+                            "raw": "http://127.0.0.1:8000/api/comment?post_id=2&comment=dff",
+                            "query": [
+                                {
+                                    "key": "post_id",
+                                    "value": "2"
+                                },
+                                {
+                                    "key": "comment",
+                                    "value": "dff"
+                                }
+                            ],
+                            "variable": [],
+                            "path": [
+                                "api",
+                                "comment"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "127",
+                                "0",
+                                "0",
+                                "1"
+                            ],
+                            "port": "8000"
+                        },
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "4|u8QHkowFCSl10cLNFVvKzSCIkeDgBq3jxsKFT5cv469280af",
+                                    "type": "string"
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "like post",
+                    "request": {
+                        "method": "POST",
+                        "url": {
+                            "raw": "http://127.0.0.1:8000/api/like?post_id=2&user_id=1",
+                            "query": [
+                                {
+                                    "key": "post_id",
+                                    "value": "2"
+                                },
+                                {
+                                    "key": "user_id",
+                                    "value": "1"
+                                }
+                            ],
+                            "variable": [],
+                            "path": [
+                                "api",
+                                "like"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "127",
+                                "0",
+                                "0",
+                                "1"
+                            ],
+                            "port": "8000"
+                        },
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "4|u8QHkowFCSl10cLNFVvKzSCIkeDgBq3jxsKFT5cv469280af",
+                                    "type": "string"
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "edit approach2",
+                    "request": {
+                        "method": "POST",
+                        "url": {
+                            "raw": "http://127.0.0.1:8000/api/edit/post/1?title=title&content=description",
+                            "query": [
+                                {
+                                    "key": "title",
+                                    "value": "title"
+                                },
+                                {
+                                    "key": "content",
+                                    "value": "description"
+                                }
+                            ],
+                            "variable": [],
+                            "path": [
+                                "api",
+                                "edit",
+                                "post",
+                                "1"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "127",
+                                "0",
+                                "0",
+                                "1"
+                            ],
+                            "port": "8000"
+                        },
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "4|u8QHkowFCSl10cLNFVvKzSCIkeDgBq3jxsKFT5cv469280af",
+                                    "type": "string"
+                                }
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "register",
+            "request": {
+                "method": "POST",
+                "url": {
+                    "raw": "http://127.0.0.1:8000/api/register?name=shweta&email=shweta@gmail.com&password=123456&password_confirmation=123456",
+                    "query": [
+                        {
+                            "key": "name",
+                            "value": "shweta"
+                        },
+                        {
+                            "key": "email",
+                            "value": "shweta@gmail.com"
+                        },
+                        {
+                            "key": "password",
+                            "value": "123456"
+                        },
+                        {
+                            "key": "password_confirmation",
+                            "value": "123456"
+                        }
+                    ],
+                    "variable": [],
+                    "path": [
+                        "api",
+                        "register"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "127",
+                        "0",
+                        "0",
+                        "1"
+                    ],
+                    "port": "8000"
+                }
+            }
+        },
+        {
+            "name": "login",
+            "request": {
+                "method": "POST",
+                "url": {
+                    "raw": "http://127.0.0.1:8000/api/login?email=shweta@gmail.com&password=123456",
+                    "query": [
+                        {
+                            "key": "email",
+                            "value": "shweta@gmail.com"
+                        },
+                        {
+                            "key": "password",
+                            "value": "123456"
+                        }
+                    ],
+                    "variable": [],
+                    "path": [
+                        "api",
+                        "login"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "127",
+                        "0",
+                        "0",
+                        "1"
+                    ],
+                    "port": "8000"
+                }
+            }
+        },
+        {
+            "name": "logout",
+            "request": {
+                "method": "POST",
+                "url": {
+                    "raw": "http://127.0.0.1:8000/api/logout",
+                    "path": [
+                        "api",
+                        "logout"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "127",
+                        "0",
+                        "0",
+                        "1"
+                    ],
+                    "port": "8000"
+                },
+                "auth": {
+                    "type": "bearer",
+                    "bearer": [
+                        {
+                            "key": "token",
+                            "value": "3|CrhdRgInkjAZ4YterF5r6E3mrVLF2aYXgsriO86iec9b1be8",
+                            "type": "string"
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}
