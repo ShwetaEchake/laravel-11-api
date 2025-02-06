@@ -10,11 +10,7 @@ use Illuminate\Support\Facades\Validator;
 class AuthController extends Controller
 {
     public function register(Request $request){
-        // $validated = $request->validate([
-        //     'name' => 'required|string|max:255',
-        //     'email' => 'required|string|email|max:255|unique:users',
-        //     'password' => 'required|string|min:6|confirmed',
-        // ]);
+
         $validated = Validator::make($request->all(),[
             'name' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
@@ -30,19 +26,19 @@ class AuthController extends Controller
                 'email' => $request->email,
                 'password' => Hash::make($request->password),
             ]);
-    
+
             $token = $user->createToken('auth_token')->plainTextToken;
-    
-            //return
+
+
             return response()->json([
                 'access_token' => $token,
                 'user' => $user
             ],200);
-    
+
         } catch (\Exception $exception) {
             return response()->json(['error' => $exception->getMessage()],403);
         }
-        
+
     }
 
     //login
@@ -60,11 +56,11 @@ class AuthController extends Controller
         try {
             if (!auth()->attempt($credentials)) {
                 return response()->json(['error' => 'Invalid credentials'],403);
-            } 
+            }
             $user = User::where('email',$request->email)->firstOrFail();
 
             $token = $user->createToken('auth_token')->plainTextToken;
-            //return
+
             return response()->json([
                 'access_token' => $token,
                 'user' => $user

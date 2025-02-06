@@ -25,7 +25,7 @@ class CommentController extends Controller
             $post->user_id = auth()->user()->id;
             $post->save();
 
-             //return
+
              return response()->json([
                 'message' => 'Comment added successfully',
             ],200);

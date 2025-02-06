@@ -26,7 +26,7 @@ class PostController extends Controller
             $post->user_id = auth()->user()->id;
             $post->save();
 
-             //return
+
              return response()->json([
                 'message' => 'Post added successfully',
             ],200);
@@ -55,7 +55,7 @@ class PostController extends Controller
                 'title' => $request->title,
                 'content' => $request->content,
             ]);
-             //return
+
              return response()->json([
                 'message' => 'Post updated successfully',
                 'updated_post' => $updatePost,
@@ -84,7 +84,7 @@ class PostController extends Controller
                 'title' => $request->title,
                 'content' => $request->content,
             ]);
-             //return
+
              return response()->json([
                 'message' => 'Post updated successfully',
                 'updated_post' => $updatePost,

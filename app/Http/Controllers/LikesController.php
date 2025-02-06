@@ -28,8 +28,8 @@ class LikesController extends Controller
                 $post->post_id = $request->post_id;
                 $post->user_id = auth()->user()->id;
                 $post->save();
-    
-                 //return
+
+
                  return response()->json([
                     'message' => 'Post Liked successfully',
                 ],200);
