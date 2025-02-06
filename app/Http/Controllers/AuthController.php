@@ -41,7 +41,7 @@ class AuthController extends Controller
 
     }
 
-    //login
+
     public function login(Request $request){
         $validated = Validator::make($request->all(),[
             'email' => 'required|string|email',
@@ -71,7 +71,7 @@ class AuthController extends Controller
         }
     }
 
-    //logout
+
     public function logout(Request $request){
         $request->user()->currentAccessToken()->delete();
 
