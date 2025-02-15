@@ -6,10 +6,12 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\Log;
 
 class AuthController extends Controller
 {
     public function register(Request $request){
+        // Log::info('Testing daily logs'); //logging.php set 'default' => env('LOG_CHANNEL', 'daily'),
 
         $validated = Validator::make($request->all(),[
             'name' => 'required|string|max:255',
